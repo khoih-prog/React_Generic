@@ -1,13 +1,28 @@
+/****************************************************************************************************************************
+  React_Generic.h
+  
+  React_Generic is a library for ESP32, ESP8266, Protenta_H7, STM32F7, etc.
+  
+  Based on and modified from :
+  
+  1) Reactduino   (https://github.com/Reactduino/Reactduino)
+  2) ReactESP     (https://github.com/mairas/ReactESP)
+  
+  Built by Khoi Hoang https://github.com/khoih-prog/React_Generic
+ 
+  Version: 2.1.0
+  
+  Version Modified By   Date      Comments
+  ------- -----------  ---------- -----------
+  2.1.0    K Hoang     23/03/2022 Initial porting and coding to support ESP32, ESP8266, RP2040, STM32, nRF52, Teensy 4.x
+ *****************************************************************************************************************************/
+
 #pragma once
 
 #ifndef REACT_GENERIC_H_
 #define REACT_GENERIC_H_
 
 #include <Arduino.h>
-
-#include <forward_list>
-#include <functional>
-#include <queue>
 
 #if (defined(NRF52840_FEATHER) || defined(NRF52832_FEATHER) || defined(NRF52_SERIES) || defined(ARDUINO_NRF52_ADAFRUIT) || \
       defined(NRF52840_FEATHER_SENSE) || defined(NRF52840_ITSYBITSY) || defined(NRF52840_CIRCUITPLAY) || \
@@ -38,6 +53,6 @@
 #endif
 
 #include "React_Generic.hpp"
-#include "React_Generic_Impl.h""
+#include "React_Generic_Impl.h"
 
 #endif		// REACT_GENERIC_H_

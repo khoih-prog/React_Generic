@@ -1,8 +1,42 @@
+/****************************************************************************************************************************
+  React_Generic.hpp
+  
+  React_Generic is a library for ESP32, ESP8266, Protenta_H7, STM32F7, etc.
+  
+  Based on and modified from :
+  
+  1) Reactduino   (https://github.com/Reactduino/Reactduino)
+  2) ReactESP     (https://github.com/mairas/ReactESP)
+  
+  Built by Khoi Hoang https://github.com/khoih-prog/React_Generic
+ 
+  Version: 2.1.0
+  
+  Version Modified By   Date      Comments
+  ------- -----------  ---------- -----------
+  2.1.0    K Hoang     23/03/2022 Initial porting and coding to support ESP32, ESP8266, RP2040, STM32, nRF52, Teensy 4.x
+ *****************************************************************************************************************************/
+
 #pragma once
 
 #ifndef REACT_GENERIC_HPP_
 #define REACT_GENERIC_HPP_
 
+#define REACT_GENERIC_VERSION            "React_Generic v2.1.0"
+
+#define REACT_GENERIC_VERSION_MAJOR      2
+#define REACT_GENERIC_VERSION_MINOR      1
+#define REACT_GENERIC_VERSION_PATCH      0
+
+#define REACT_GENERIC_VERSION_INT        2001000
+
+#include <Arduino.h>
+
+#include <forward_list>
+#include <functional>
+#include <queue>
+
+#include "React_Generic_Debug.h"
 
 namespace react_generic 
 {
@@ -133,6 +167,7 @@ namespace react_generic
       DelayReaction(const uint64_t delay, const react_callback callback);
       
       virtual ~DelayReaction() {}
+      
       void tick();
   };
   
@@ -298,9 +333,7 @@ namespace react_generic
       React_Generic(bool singleton = true) 
       {
         if (singleton) 
-        {
           app = this;
-        }
       }
       
       void tick(void);
