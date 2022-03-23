@@ -9,7 +9,7 @@ By
 - [Matti Airas](https://github.com/mairas)
 - [Khoi Hoang](https://github.com/khoih-prog)
 
-An asynchronous programming library for the generic microcontrollers using the Arduino framework. Currently supporting ESP32, ESP8266, RP2040, STM32, nRF52, Teensy 4.x
+An asynchronous programming library for the generic microcontrollers using the Arduino framework. Currently supporting ESP32, ESP8266, SAMD21/SAMD51, RP2040, STM32, nRF52, Teensy 4.x
 
 The library is at the core of the [SensESP](https://github.com/SignalK/SensESP) project but is completely generic and can be used for standalone projects without issues.
 

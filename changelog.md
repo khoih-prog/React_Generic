@@ -23,6 +23,6 @@
 
 ### Releases v2.1.0
 
-1. Initial porting and coding to support ESP32, ESP8266, RP2040, STM32, nRF52, Teensy 4.x
+1. Initial porting and coding to support ESP32, ESP8266, SAMD21/SAMD51, RP2040, STM32, nRF52, Teensy 4.x
 
 

@@ -2,7 +2,7 @@
   "name": "React_Generic",
   "version": "2.1.0",
   "keywords": "React_Generic, Reactduino, async",
-  "description": "Asynchronous programming library for the Arduino Framework",
+  "description": "Asynchronous programming library for the generic microcontrollers compatible with the Arduino framework. React_Generic is an asynchronous programming library for creating non-blocking applications on the Arduino framework. Currently supporting ESP32, ESP8266, SAMD21/SAMD51, RP2040, STM32, nRF52, Teensy 4.x",
   "authors":
   [
   	{
