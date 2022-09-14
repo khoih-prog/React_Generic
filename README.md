@@ -14,7 +14,6 @@
 
 * [Why do we need this React_Generic library](#why-do-we-need-this-React_Generic-library)
   * [Features](#features)
-  * [Why Async is better](#why-async-is-better)
   * [Currently supported Boards](#currently-supported-boards)
 * [Changelog](changelog.md)
 * [Prerequisites](#prerequisites)
@@ -476,8 +475,8 @@ If you want to contribute to this project:
 ## Copyright
 
 
-Copyright 2017- Andrew Carter
-Copyright 2019- Matti Airas
-Copyright 2022- Khoi Hoang
+- Copyright 2017- Andrew Carter
+- Copyright 2019- Matti Airas
+- Copyright 2022- Khoi Hoang
 
   
