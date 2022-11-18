@@ -358,7 +358,7 @@ the reaction. `react_callback` is a typedef for `std::function<void()>` and can 
 DelayReaction app.onDelay(uint32_t t, react_callback cb);
 ```
 
-Delay the executation of a callback by `t` milliseconds.
+Delay the execution of a callback by `t` milliseconds.
 
 ```cpp
 RepeatReaction app.onRepeat(uint32_t t, react_callback cb);

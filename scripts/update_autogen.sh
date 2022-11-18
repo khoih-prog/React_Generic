@@ -12,7 +12,7 @@ if ! git diff-index --quiet HEAD --; then
     exit 1
 fi
 
-# udpate the doxygen docs
+# update the doxygen docs
 
 git rm -rf docs/generated
 mkdir -p docs/generated
