@@ -1,20 +1,20 @@
 /****************************************************************************************************************************
-  React_Generic_Debug.h
-  
-  React_Generic is a library for ESP32, ESP8266, Protenta_H7, STM32F7, etc.
-  
-  Based on and modified from :
-  
-  1) Reactduino   (https://github.com/Reactduino/Reactduino)
-  2) ReactESP     (https://github.com/mairas/ReactESP)
-  
-  Built by Khoi Hoang https://github.com/khoih-prog/React_Generic
- 
-  Version: 2.1.0
-  
-  Version Modified By   Date      Comments
-  ------- -----------  ---------- -----------
-  2.1.0    K Hoang     23/03/2022 Initial porting and coding to support ESP32, ESP8266, RP2040, STM32, nRF52, Teensy 4.x
+    React_Generic_Debug.h
+
+    React_Generic is a library for ESP32, ESP8266, Protenta_H7, STM32F7, etc.
+
+    Based on and modified from :
+
+    1) Reactduino   (https://github.com/Reactduino/Reactduino)
+    2) ReactESP     (https://github.com/mairas/ReactESP)
+
+    Built by Khoi Hoang https://github.com/khoih-prog/React_Generic
+
+    Version: 2.1.0
+
+    Version Modified By   Date      Comments
+    ------- -----------  ---------- -----------
+    2.1.0    K Hoang     23/03/2022 Initial porting and coding to support ESP32, ESP8266, RP2040, STM32, nRF52, Teensy 4.x
  *****************************************************************************************************************************/
 
 #pragma once
@@ -51,8 +51,8 @@
 
 /////////////////////////////////////////////////////////
 
-#define REACT_DEBUG(...) 				if(_REACT_GENERIC_LOGLEVEL_>3) { REACT_PRINTF(__VA_ARGS__); }
-#define REACT_SSL_DEBUG(...) 		if(_REACT_GENERIC_LOGLEVEL_>3) { REACT_PRINTF(__VA_ARGS__); }
+#define REACT_DEBUG(...)                if(_REACT_GENERIC_LOGLEVEL_>3) { REACT_PRINTF(__VA_ARGS__); }
+#define REACT_SSL_DEBUG(...)        if(_REACT_GENERIC_LOGLEVEL_>3) { REACT_PRINTF(__VA_ARGS__); }
 
 #define REACT_ASSERT( a )       do{ if(!(a)){REACT_PRINTF("ASSERT: %s %u \n", __FILE__, __LINE__);}}while(0)
 

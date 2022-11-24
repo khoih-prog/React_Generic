@@ -1,20 +1,20 @@
 /****************************************************************************************************************************
-  React_Generic_Impl.h
-  
-  React_Generic is a library for ESP32, ESP8266, Protenta_H7, STM32F7, etc.
-  
-  Based on and modified from :
-  
-  1) Reactduino   (https://github.com/Reactduino/Reactduino)
-  2) ReactESP     (https://github.com/mairas/ReactESP)
-  
-  Built by Khoi Hoang https://github.com/khoih-prog/React_Generic
- 
-  Version: 2.1.0
-  
-  Version Modified By   Date      Comments
-  ------- -----------  ---------- -----------
-  2.1.0    K Hoang     23/03/2022 Initial porting and coding to support ESP32, ESP8266, RP2040, STM32, nRF52, Teensy 4.x
+    React_Generic_Impl.h
+
+    React_Generic is a library for ESP32, ESP8266, Protenta_H7, STM32F7, etc.
+
+    Based on and modified from :
+
+    1) Reactduino   (https://github.com/Reactduino/Reactduino)
+    2) ReactESP     (https://github.com/mairas/ReactESP)
+
+    Built by Khoi Hoang https://github.com/khoih-prog/React_Generic
+
+    Version: 2.1.0
+
+    Version Modified By   Date      Comments
+    ------- -----------  ---------- -----------
+    2.1.0    K Hoang     23/03/2022 Initial porting and coding to support ESP32, ESP8266, RP2040, STM32, nRF52, Teensy 4.x
  *****************************************************************************************************************************/
 
 #pragma once
@@ -40,23 +40,23 @@ namespace react_generic
 {
 
 /**
-   @brief Return the current time since the device restart in microseconds
+    @brief Return the current time since the device restart in microseconds
 
-   Returns the time since the device restart. Even though the time
-   is in microseconds, a 64-bit integer is all but guaranteed not to
-   rewrap, ever.
+    Returns the time since the device restart. Even though the time
+    is in microseconds, a 64-bit integer is all but guaranteed not to
+    rewrap, ever.
 */
 #ifdef ESP32
-  uint64_t ICACHE_RAM_ATTR micros64() 
-  {
-    return esp_timer_get_time();
-  }
+uint64_t ICACHE_RAM_ATTR micros64()
+{
+  return esp_timer_get_time();
+}
 #elif !defined(ESP8266)
-  // For remaining boards, except ESP32 and ESP8266
-  uint64_t micros64() 
-  {
-    return ( (uint64_t) micros() );
-  }
+// For remaining boards, except ESP32 and ESP8266
+uint64_t micros64()
+{
+  return ( (uint64_t) micros() );
+}
 #endif
 
 
@@ -124,11 +124,11 @@ void RepeatReaction::tick()
   app_context->timed_queue.push(this);
 }
 
-void UntimedReaction::add(React_Generic* app) 
+void UntimedReaction::add(React_Generic* app)
 {
-  if (app == nullptr) 
+  if (app == nullptr)
     app = React_Generic::app;
- 
+
   app->untimed_list.push_front(this);
 }
 
@@ -143,11 +143,11 @@ void UntimedReaction::remove(React_Generic* app)
 
 void StreamReaction::tick()
 {
-  if (stream.available()) 
+  if (stream.available())
     this->callback();
 }
 
-void TickReaction::tick() 
+void TickReaction::tick()
 {
   this->callback();
 }
@@ -199,13 +199,13 @@ void React_Generic::tickTimed()
   uint64_t trigger_t;
   TimedReaction* top;
 
-  while (true) 
+  while (true)
   {
     if (timed_queue.empty())
       break;
 
     top = timed_queue.top();
-    
+
     if (!top->isEnabled())
     {
       timed_queue.pop();
@@ -299,4 +299,4 @@ void React_Generic::remove(Reaction* reaction)
 
 }  // namespace react_generic
 
-#endif		// REACT_GENERIC_IMPL_H_
+#endif      // REACT_GENERIC_IMPL_H_
